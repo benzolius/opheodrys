@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Module for the creation of objects from yaml files
+Module for the creation of setting objects from yaml files
 """
 from os import path
 import numbers
 
+# Avoid import error during install
 try:
     import yaml
 except ImportError:
@@ -46,7 +47,7 @@ def update(default_obj, custom_obj):
 def get_settings(setting_path):
     """
     Loads settings from yaml files in a given folder
-    default.yaml contains default, this file is in SCM (git, ...)
+    default.yaml contains default settings, this file is in SCM (git, ...)
     custom.yaml contains local custom settings which are not in SCM
     """
     default_settings = from_file(path.join(setting_path, 'default.yaml'))
