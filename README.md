@@ -5,7 +5,7 @@ Flexible configuration system for Python projects
 
 The purpose of the project is to have a flexible configuration system.
 
-For now the config files should be [YAML](yaml.org) files.
+For now the config files should be [YAML](http://yaml.org) files.
 
 ### default.yaml
 Usually there should be sensible default values, which can be saved in a source
