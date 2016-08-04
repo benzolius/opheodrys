@@ -20,7 +20,7 @@ def from_file(filename):
         with open(filename) as yaml_file:
             return yaml.safe_load(yaml_file)
     except Exception as exception:
-        print('Exception: {}\n'.format(exception))
+        print('Warning: {}\n'.format(exception))
 
 
 def update(default_obj, custom_obj):
@@ -40,7 +40,7 @@ def update(default_obj, custom_obj):
             default_value = default_obj.get(key)
             default_obj.update(((key, update(default_value, value)),))
     except Exception as exception:
-        print('Exception {}\n'.format(exception))
+        print('Warning: {}\n'.format(exception))
     return default_obj
 
 

@@ -1,7 +1,5 @@
 # -*- coding: UTF-8 -*-
-import re
 from codecs import open
-from os import path
 
 from setuptools import setup
 
