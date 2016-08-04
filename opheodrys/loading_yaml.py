@@ -39,6 +39,8 @@ def update(default_obj, custom_obj):
         for key, value in custom_obj.items():
             default_value = default_obj.get(key)
             default_obj.update(((key, update(default_value, value)),))
+    except AttributeError:
+        pass
     except Exception as exception:
         print('Warning: {}\n'.format(exception))
     return default_obj
